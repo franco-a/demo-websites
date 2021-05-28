@@ -1,0 +1,35 @@
+@use '../abstracts' as *;
+
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  color: var(--clr-neutral-white);
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-black);
+  padding: prem(16) prem(40);
+  border-radius: 29px;
+
+  &__transparent {
+    opacity: 0.5;
+  }
+
+  &--cyan {
+    background-color: var(--clr-primary-cyan);
+    transition: 200ms ease-in-out;
+
+    &:hover,
+    &:focus {
+      background-color: var(--clr-primary-turqoise);
+    }
+  }
+
+  &--violet {
+    background-color: var(--clr-accent-violet);
+    transition: 200ms ease-in-out;
+
+    &:hover,
+    &:focus {
+      background-color: var(--clr-accent-pink);
+    }
+  }
+}

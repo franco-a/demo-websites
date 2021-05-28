@@ -1,0 +1,21 @@
+@mixin before-after($state: before, $content: '', $position: absolute) {
+  position: relative;
+
+  &::#{$state} {
+    content: $content;
+    position: $position;
+    @content
+  }
+}
+
+@mixin flex-center() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin media($width) {
+  @media only screen and (min-width: $width) {
+    @content;
+  }
+}

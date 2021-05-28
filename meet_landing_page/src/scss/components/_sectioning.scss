@@ -1,0 +1,39 @@
+@use '../abstracts/mixins' as *;
+
+$top-line: 84px;
+
+.sectioning-container {
+  @include flex-center();
+  padding: 64px 0;
+  position: relative;
+  z-index: 1;
+
+  &--modified {
+    padding: 80px 0 0 0;
+    transform: translateY(30px);
+  }
+}
+
+.sectioning {
+  display: inline-block;
+  background-color: var(--clr-neutral-white);
+  border: 1px solid var(--clr-neutral-gray);
+  border-radius: 50%;
+  margin-top: $top-line;
+  padding: 15px 19px;
+  font-size: 16px;
+  font-weight: var(--fw-black);
+  color: var(--clr-neutral-gray);
+  @include before-after(before) {
+    top: -$top-line;
+    left: 50%;
+    width: 1px;
+    height: $top-line;
+    background-color: var(--clr-neutral-gray);
+  }
+
+  &:hover {
+    background-color: lighten($color: #000000, $amount: 90%);
+    transition: 250ms ease-in-out;
+  }
+}

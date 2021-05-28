@@ -1,0 +1,7 @@
+@function prem($pixel, $base:16) {
+  @return ($pixel / $base) * 1rem;
+}
+
+@function pem($pixel, $base:16) {
+  @return ($pixel / $base) * 1em;
+}

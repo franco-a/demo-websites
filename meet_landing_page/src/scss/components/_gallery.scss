@@ -1,0 +1,46 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.gallery {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  padding: 0 24px;
+
+  &__image {
+    width: 151px;
+    height: 143px;
+    border-radius: 8px;
+
+    &:hover {
+      transform: translateY(-10px);
+      transition: 250ms ease-in;
+    }
+  }
+}
+
+@include media($breakpoint-medium) {
+  .gallery {
+    gap: 11px;
+
+    &__image {
+      width: 164px;
+      height: 156px;
+    }
+  }
+}
+
+@include media($breakpoint-large) {
+  .gallery {
+    gap: 30px;
+
+    &__image {
+      width: 255px;
+      height: 242px;
+    }
+  }
+}
+

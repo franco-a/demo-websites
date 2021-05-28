@@ -1,0 +1,51 @@
+@use '../abstracts' as *;
+
+html {
+  font-family: 'Red Hat Display', sans-serif;;
+}
+
+.heading,
+.subheading,
+.overline {
+  font-weight: var(--fw-black);
+}
+
+.heading {
+  font-size: var(--fs-xl);
+  color: var(--clr-neutral-black);
+  line-height: var(--lh-heading);
+}
+
+.subheading {
+  font-size: var(--fs-lg);
+  line-height: var(--lh-subheading);
+
+  &--dark {
+    color: var(--clr-neutral-black);
+  }
+
+  &--light {
+    color: var(--clr-neutral-white)
+  }
+}
+
+.paragraph {
+  font-size: var(--fs-md);
+  font-weight: var(--fw-medium);
+  line-height: var(--lh-paragraph);
+
+  &--dark {
+    color: var(--clr-neutral-gray);
+  }
+
+  &--light {
+    color: var(--clr-neutral-white)
+  }
+}
+
+.overline {
+  color: var(--clr-primary-cyan);
+  font-size: var(--fs-sm);
+  letter-spacing: prem(4);
+  text-transform: uppercase;
+}

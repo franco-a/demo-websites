@@ -1,0 +1,43 @@
+@use './functions' as *;
+
+$font-weights: (
+  black: 900,
+  medium: 500
+);
+
+$font-sizes: (
+  small-screen: (
+    xl: prem(40),
+    lg: prem(32),
+    md: prem(16),
+    sm: prem(16)
+  ),
+
+  medium-screen: (
+    xl: prem(48),
+    lg: prem(40)
+  ),
+
+  large-screen: (
+    xl: prem(64),
+    md: prem(18)
+  )
+);
+
+$line-heights: (
+  small-screen: (
+    heading: prem(40),
+    subheading: prem(32),
+    paragraph: prem(26)
+  ),
+
+  medium-screen: (
+    heading: prem(48),
+    subheading: prem(40)
+  ),
+
+  large-screen: (
+    heading: prem(64),
+    subheading: prem(44)
+  ),
+);
