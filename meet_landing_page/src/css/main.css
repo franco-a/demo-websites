@@ -220,7 +220,7 @@ html {
   height: 84px;
   background-color: var(--clr-neutral-gray);
 }
-.sectioning:hover {
+.sectioning:hover, .sectioning:focus {
   background-color: #e6e6e6;
   transition: 250ms ease-in-out;
 }

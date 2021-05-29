@@ -32,7 +32,8 @@ $top-line: 84px;
     background-color: var(--clr-neutral-gray);
   }
 
-  &:hover {
+  &:hover,
+  &:focus {
     background-color: lighten($color: #000000, $amount: 90%);
     transition: 250ms ease-in-out;
   }
