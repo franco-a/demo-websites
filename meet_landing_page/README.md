@@ -5,7 +5,9 @@ The design and assets belongs to frontendmentor.io
 while all of the code belongs and was made by me
 
 ## Screenshots
+### Design Target
 ![Design Target](./design-target.jpg)
+### Project Result
 ![Project Result](./project-result.png)
 
 ## Live Site
