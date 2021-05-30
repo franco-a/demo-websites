@@ -1,0 +1,54 @@
+@use '../abstracts' as *;
+
+:root {
+  @each $role, $color in $colors {
+    @each $name, $value in $color {
+      --clr-#{$role}-#{$name}: #{$value};
+    }
+  }
+
+  @each $weight, $value in $font-weights {
+    --fw-#{$weight}: #{$value};
+  }
+
+  @each $screen-size, $font-size in $font-sizes {
+    @if $screen-size == small-screen {
+      @each $size, $value in $font-size {
+        --fs-#{$size}: #{$value};
+      }
+    } @else if $screen-size == medium-screen{
+      @include media($breakpoint-medium) {
+        @each $size, $value in $font-size {
+          --fs-#{$size}: #{$value};
+        }
+      }
+    } @else if $screen-size == large-screen{
+      @include media($breakpoint-large) {
+        @each $size, $value in $font-size {
+          --fs-#{$size}: #{$value};
+        }
+      }
+    }
+  }
+
+  @each $screen-size, $line-height in $line-heights {
+    @if $screen-size == small-screen {
+      @each $role, $value in $line-height {
+        --lh-#{$role}: #{$value};
+      }
+    } @else if $screen-size == medium-screen{
+      @include media($breakpoint-medium) {
+        @each $role, $value in $line-height {
+          --lh-#{$role}: #{$value};
+        }
+      }
+    } @else if $screen-size == large-screen{
+      @include media($breakpoint-large) {
+        @each $role, $value in $line-height {
+          --lh-#{$role}: #{$value};
+        }
+      }
+    }
+  }
+  
+}

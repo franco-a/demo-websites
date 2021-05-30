@@ -1,0 +1,28 @@
+@mixin before-after($state: before, $content: '', $position: absolute) {
+  position: relative;
+
+  &::#{$state} {
+    content: $content;
+    position: $position;
+    @content
+  }
+};
+
+@mixin flex-center($direction: row) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: center;
+  align-items: center;
+};
+
+@mixin media($width) {
+  @media only screen and (min-width: $width) {
+    @content;
+  }
+};
+
+@mixin primitive-center() {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+};
