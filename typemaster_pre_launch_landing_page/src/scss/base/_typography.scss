@@ -1,0 +1,31 @@
+@use '../abstracts' as *;
+
+.heading,
+.subheading,
+.s3heading {
+  color: var(--clr-neutral-black);
+  font-weight: var(--fw-black);
+  text-transform: uppercase;
+}
+
+.heading {
+  font-size: var(--fs-xl);
+  line-height: var(--lh-heading);
+}
+
+.subheading {
+  font-size: var(--fs-lg);
+  line-height: var(--lh-subheading);
+}
+
+.s3heading {
+  font-size: var(--fs-md);
+  line-height: var(--lh-s3heading);
+}
+
+.paragraph {
+  color: var(--clr-neutral-gray1);
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-medium);
+  line-height: var(--lh-paragraph);
+}

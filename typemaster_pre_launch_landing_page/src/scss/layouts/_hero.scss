@@ -1,0 +1,29 @@
+@use '../abstracts' as *;
+
+.hero {
+  margin-top: prem(64);
+
+  &__heading {
+    margin-bottom: prem(32);
+    max-width: 10ch;
+  }
+
+  &__paragraph {
+    margin-bottom: prem(32);
+    max-width: 36ch;
+
+    @include media($breakpoint-medium) {
+      max-width: 44ch;
+    }
+  }
+
+  &__figure {
+    background-image: url(../assets/mobile/image-keyboard.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 331px;
+    background-position: left center;
+    width: 100vw;
+    height: 331px;
+    margin-top: 64px;
+  }
+}

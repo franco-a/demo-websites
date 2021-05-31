@@ -1,0 +1,15 @@
+@use '../abstracts' as *;
+
+.main-container {
+  max-width: 90%;
+  padding: 23px 0 50px;
+
+  @include media($breakpoint-medium) {
+    padding: 40px 0 43px;
+  }
+
+  @include media($breakpoint-large) {
+    max-width: 80%;
+    padding: 55px 0 39px;
+  }
+}

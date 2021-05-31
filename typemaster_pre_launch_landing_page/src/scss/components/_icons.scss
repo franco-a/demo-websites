@@ -1,0 +1,14 @@
+@use '../abstracts' as *;
+
+.icon {
+  display: block;
+  background-color: var(--clr-primary-500);
+  border-radius: 16px;
+  width: 65px;
+  height: 65px;
+  position: relative;
+
+  & > img {
+    @include primitive-center();
+  }
+}

@@ -1,0 +1,8 @@
+.header {
+  display: flex;
+  flex-direction: row;
+
+  &__btn {
+    margin-left: auto;
+  }
+}

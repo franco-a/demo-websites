@@ -1,0 +1,44 @@
+@use '../abstracts' as *;
+
+.description {
+  @include flex-center(column);
+  text-align: center;
+
+  @include media($breakpoint-medium) {
+    flex-direction: row;
+    justify-content: flex-start;
+    text-align: left;
+  }
+
+  @include media($breakpoint-large) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  &__subheading {
+    max-width: 10ch;
+    margin-bottom: prem(24);
+    //margin-right: prem(34);
+
+    @include media($breakpoint-medium) {
+      margin-bottom: 0;
+    }
+
+    @include media($breakpoint-large) {
+      margin-bottom: prem(27);
+    }
+  }
+
+  &__paragraph {
+    max-width: 36ch;
+    
+    @include media($breakpoint-medium) {
+      margin-left: auto;
+      max-width: 44ch;
+    }
+
+    @include media($breakpoint-large) {
+      margin-left: 0;
+    }
+  }
+}

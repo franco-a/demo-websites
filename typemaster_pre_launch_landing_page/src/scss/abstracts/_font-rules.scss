@@ -1,9 +1,6 @@
 @use './functions' as *;
 
 $font-weights: (
-  thin: 100,
-  light: 300,
-  regular: 400,
   medium: 500,
   bold: 700,
   black: 900,
@@ -11,40 +8,26 @@ $font-weights: (
 
 $font-sizes: (
   small-screen: (
-    xl: prem(39.81),
-    lg: prem(27.65),
-    md: prem(23.04),
+    xl: prem(48),
+    lg: prem(32),
+    md: prem(24),
     sm: prem(16),
-    xs: prem(13.33),
-  ),
-
-  medium-screen: (
-    xl: prem(48.83),
-    lg: prem(31.25),
-    md: prem(25),
-    sm: prem(16),
-    xs: prem(12.80),
   ),
 
   large-screen: (
-    xl: prem(67.34),
-    lg: prem(37.90),
-    md: prem(28.43),
-    sm: prem(16),
-    xs: prem(12),
+    xl: prem(56),
   )
 );
 
 $line-heights: (
   small-screen: (
+    heading: prem(48),
+    subheading: prem(36),
+    s3heading: prem(28),
     paragraph: prem(26),
   ),
 
-  medium-screen: (
-    paragraph: prem(28),
-  ),
-
   large-screen: (
-    paragraph: prem(30),
+    heading: prem(56),
   ),
 );

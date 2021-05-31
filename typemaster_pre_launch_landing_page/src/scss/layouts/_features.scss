@@ -1,0 +1,59 @@
+@use '../abstracts' as *;
+
+.features {
+  @include flex-center(row);
+  flex-wrap: wrap;
+  gap: 64px;
+  margin: 111px 0 96px;
+
+  @include media($breakpoint-medium) {
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 72px 69px;
+  }
+
+  @include media($breakpoint-large) {
+    gap: 30px
+  }
+}
+
+.feature {
+  @include flex-center(column);
+  text-align: center;
+  width: fit-content;
+
+  @include media($breakpoint-medium) {
+    justify-content: flex-start;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  &__icon {
+    margin-bottom: 48px;
+
+    @include media($breakpoint-medium) {
+      margin-bottom: 40px;
+    }
+
+    @include media($breakpoint-large) {
+      margin-bottom: 48px;
+    }
+  }
+
+  &__s3heading {
+    max-width: 15ch;
+    margin-bottom: 24px;
+  }
+
+  &__paragraph {
+    max-width: 36ch;
+
+    @include media($breakpoint-medium) {
+      max-width: 31ch;
+    }
+
+    @include media($breakpoint-large) {
+      max-width: 28ch;
+    }
+  }
+}
