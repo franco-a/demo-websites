@@ -3,6 +3,16 @@
 .hero {
   margin-top: prem(64);
 
+  @include media($breakpoint-medium) {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  &__action {
+    min-width: 50%;
+  }
+
   &__heading {
     margin-bottom: prem(32);
     max-width: 10ch;
@@ -22,8 +32,18 @@
     background-repeat: no-repeat;
     background-size: 100% 331px;
     background-position: left center;
+    border-radius: 15px;
     width: 100vw;
     height: 331px;
     margin-top: 64px;
+
+    @include media($breakpoint-medium) {
+      background-image: url(../assets/tablet/image-keyboard.jpg);
+      margin-top: 0;
+      background-size: 100% 425px;
+      width: 100%;
+      height: 425px;
+      transform: translateX(10%);
+    }
   }
 }

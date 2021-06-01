@@ -131,6 +131,9 @@ select {
   font-weight: var(--fw-medium);
   line-height: var(--lh-paragraph);
 }
+.paragraph--bold {
+  font-weight: var(--fw-bold);
+}
 
 .btn {
   border-radius: 8px;
@@ -212,6 +215,16 @@ select {
 .hero {
   margin-top: 4rem;
 }
+@media only screen and (min-width: 767px) {
+  .hero {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+}
+.hero__action {
+  min-width: 50%;
+}
 .hero__heading {
   margin-bottom: 2rem;
   max-width: 10ch;
@@ -230,9 +243,84 @@ select {
   background-repeat: no-repeat;
   background-size: 100% 331px;
   background-position: left center;
+  border-radius: 15px;
   width: 100vw;
   height: 331px;
   margin-top: 64px;
+}
+@media only screen and (min-width: 767px) {
+  .hero__figure {
+    background-image: url(../assets/tablet/image-keyboard.jpg);
+    margin-top: 0;
+    background-size: 100% 425px;
+    width: 100%;
+    height: 425px;
+    transform: translateX(10%);
+  }
+}
+
+.figures {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin: 24px 0 75px;
+}
+@media only screen and (min-width: 767px) {
+  .figures {
+    justify-content: space-between;
+  }
+}
+
+.figure--1 {
+  background-image: url(../assets/mobile/image-phone-and-keyboard.jpg);
+  background-repeat: no-repeat;
+  background-size: 100vw 193px;
+  background-position: center center;
+  border-radius: 15px;
+  width: 100%;
+  height: 193px;
+  overflow: hidden;
+  position: relative;
+  transform: translateX(-20%);
+}
+@media only screen and (min-width: 767px) {
+  .figure--1 {
+    background-image: url(../assets/tablet/image-phone-and-keyboard.jpg);
+    background-size: 214px 320px;
+    width: 214px;
+    height: 320px;
+    transform: none;
+  }
+}
+
+.figure--2 {
+  background-image: url(../assets/mobile/image-glass-and-keyboard.jpg);
+  background-repeat: no-repeat;
+  background-size: 220px 193px;
+  background-position: center center;
+  border-radius: 15px;
+  min-width: 220px;
+  height: 193px;
+}
+@media only screen and (min-width: 767px) {
+  .figure--2 {
+    background-image: url(../assets/tablet/image-glass-and-keyboard.jpg);
+    background-size: 445px 320px;
+    width: 445px;
+    height: 320px;
+  }
+}
+
+.overlay {
+  background-color: var(--clr-primary-500);
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  mix-blend-mode: multiply;
 }
 
 .description {
@@ -261,6 +349,8 @@ select {
 }
 @media only screen and (min-width: 767px) {
   .description__subheading {
+    grid-row: 2;
+    grid-column: 1;
     margin-bottom: 0;
   }
 }
@@ -274,6 +364,8 @@ select {
 }
 @media only screen and (min-width: 767px) {
   .description__paragraph {
+    grid-row: 2;
+    grid-column: 2;
     margin-left: auto;
     max-width: 44ch;
   }

@@ -28,4 +28,8 @@
   font-size: var(--fs-sm);
   font-weight: var(--fw-medium);
   line-height: var(--lh-paragraph);
+
+  &--bold {
+    font-weight: var(--fw-bold);
+  }
 }
