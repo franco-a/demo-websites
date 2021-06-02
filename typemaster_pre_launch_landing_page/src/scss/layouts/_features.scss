@@ -7,7 +7,7 @@
   margin: 111px 0 96px;
 
   @include media($breakpoint-medium) {
-    justify-content: flex-start;
+    justify-content: space-evenly;
     align-items: flex-start;
     gap: 72px 69px;
   }

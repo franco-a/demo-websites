@@ -1,15 +1,19 @@
 @use '../abstracts' as *;
 
 .hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   margin-top: prem(64);
 
   @include media($breakpoint-medium) {
-    display: flex;
+    //display: flex;
     flex-direction: row;
-    align-items: center;
+    //align-items: center;
   }
 
   &__action {
+    padding-right: 20px;
     min-width: 50%;
   }
 
@@ -31,11 +35,13 @@
     background-image: url(../assets/mobile/image-keyboard.jpg);
     background-repeat: no-repeat;
     background-size: 100% 331px;
-    background-position: left center;
+    background-position: center center;
     border-radius: 15px;
-    width: 100vw;
+    width: 100%;
     height: 331px;
     margin-top: 64px;
+    margin-bottom: 24px;
+    overflow: hidden;
 
     @include media($breakpoint-medium) {
       background-image: url(../assets/tablet/image-keyboard.jpg);
@@ -43,7 +49,14 @@
       background-size: 100% 425px;
       width: 100%;
       height: 425px;
-      transform: translateX(10%);
+    }
+
+    @include media($breakpoint-large) {
+      background-image: url(../assets/desktop/image-keyboard.jpg);
+      background-size: 100% 480px;
+      height: 480px;
+      position: relative;
+      z-index: 10;
     }
   }
 }
