@@ -1,0 +1,57 @@
+@use '../abstracts' as *;
+
+
+.benefits {
+  @include flex-center(column);
+  margin-bottom: 186px;
+  text-align: center;
+
+  @include respond-to(medium) {
+    margin-bottom: 150px;
+  }
+}
+
+.benefits__subheading {
+  max-width: 15ch;
+  margin-bottom: prem(16);
+
+  @include respond-to(medium) {
+    max-width: fit-content;
+    margin-bottom: prem(19);
+  }
+}
+
+.benefits__supporting {
+  max-width: 30ch;
+  margin-bottom: prem(65);
+
+  @include respond-to(medium) {
+    max-width: 60ch;
+    margin-bottom: prem(80);
+  }
+}
+
+.benefits__img {
+  max-width: 312px;
+  max-height: 238px;
+  margin-bottom: 56px;
+}
+
+.benefits__benefit {
+  margin-bottom: prem(10);
+}
+
+.benefits__description {
+  max-width: 30ch;
+  margin-bottom: prem(48);
+
+  @include respond-to(medium) {
+    max-width: 34ch;
+    margin-bottom: prem(56);
+    text-align: left;
+  }
+
+  &:nth-child(3n) {
+    margin-bottom: 0;
+  }
+}

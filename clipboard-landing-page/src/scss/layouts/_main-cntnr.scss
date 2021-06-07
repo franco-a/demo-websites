@@ -1,0 +1,15 @@
+@use '../abstracts' as *;
+
+
+.main {
+  @include flex-center(column);
+  padding: 0 15px;
+  background-image: url(../images/bg-header-mobile.png);
+  background-size: 100vw;
+  background-repeat: no-repeat;
+  background-position: top center;
+  
+  @include respond-to(medium) {
+    background-image: url(../images/bg-header-desktop.png);
+  }
+}

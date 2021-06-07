@@ -1,0 +1,16 @@
+@use '../abstracts' as *;
+
+
+.socials {
+  @include flex-center;
+  gap: 40px;
+}
+
+.social {
+
+  &:focus,
+  &:hover {
+    fill: var(--clr-primary-500);
+    transition: 250ms ease-in-out;
+  }
+}

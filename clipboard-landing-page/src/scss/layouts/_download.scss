@@ -1,0 +1,37 @@
+@use '../abstracts' as *;
+
+
+.download {
+  @include flex-center(column);
+  text-align: center;
+}
+
+.download__subheading {
+  max-width: 17ch;
+  margin-bottom: prem(16);
+
+  @include respond-to(medium) {
+    max-width: fit-content;
+    margin-bottom: prem(19);
+  }
+}
+
+.download__supporting {
+  max-width: 25ch;
+  margin-bottom: prem(46);
+
+  @include respond-to(medium) {
+    max-width: 60ch;
+    margin-bottom: prem(48);
+  }
+}
+
+.download__buttons {
+  @include flex-center(row);
+  flex-wrap: wrap;
+  gap: 24px;
+
+  @include respond-to(medium) {
+    gap: 16px;
+  }
+}

@@ -11,8 +11,8 @@
 
 
 
-
   
+
   // Gets all weight values from $font-weights map in '_font-rules.scss'
   @each $weight, $value in $font-weights {
     --fw-#{$weight}: #{$value};

@@ -1,0 +1,14 @@
+@use '../abstracts' as *;
+
+
+.sponsors {
+  @include flex-center(column);
+  margin-bottom: 170px;
+  gap: 60px;
+
+  @include respond-to(medium) {
+    margin-bottom: 150px;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}

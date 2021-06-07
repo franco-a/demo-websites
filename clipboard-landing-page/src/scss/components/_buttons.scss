@@ -1,0 +1,28 @@
+@use '../abstracts' as *;
+
+
+.btn {
+  display: inline-block;
+  padding: prem(13) prem(50);
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-semi-bold);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 28px;
+  border-bottom: 4px solid rgba(0, 0, 0, 0.10);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  
+  &:hover,
+  &:focus {
+    opacity: 0.7;
+    transition: 250ms ease-in-out;
+  }
+}
+
+.btn--primary {
+  background-color: var(--clr-primary-500);
+}
+
+.btn--accent {
+  background-color: var(--clr-accent-500);
+}

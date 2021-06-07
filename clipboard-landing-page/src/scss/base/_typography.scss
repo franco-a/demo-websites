@@ -1,0 +1,31 @@
+@use '../abstracts' as *;
+
+html {
+  font-family: 'Bai Jamjuree', sans-serif;;
+}
+
+
+.heading,
+.subheading,
+.sub3heading {
+  font-weight: var(--fw-semi-bold);
+  color: var(--clr-neutral-500);
+}
+
+.heading {
+  font-size: var(--fs-xl);
+}
+
+.subheading {
+  font-size: var(--fs-lg);
+}
+
+.sub3heading {
+  font-size: var(--fs-md);
+}
+
+.paragraph {
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-regular);
+  color: var(--clr-neutral-400);
+}

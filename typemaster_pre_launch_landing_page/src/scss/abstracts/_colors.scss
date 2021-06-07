@@ -1,13 +1,15 @@
 $colors: (
   primary: (
-    500: #F16718,
-    400: #FF9B62,
+    red: #ff0000,
+  ),
+
+  accent: (
+    blue: #0000ff,
   ),
 
   neutral: (
-    black: #162542,
-    white: #fff,
-    gray1: #7B8BAD,
-    gray2: #E8EFF2,
+    black:   #000,
+    white:   #fff,
+    gray: #808080,
   ),
 )
