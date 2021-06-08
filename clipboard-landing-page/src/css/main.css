@@ -93,6 +93,15 @@ html {
   color: var(--clr-neutral-400);
 }
 
+.sr-only {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
 .btn {
   display: inline-block;
   padding: 0.8125rem 3.125rem;
