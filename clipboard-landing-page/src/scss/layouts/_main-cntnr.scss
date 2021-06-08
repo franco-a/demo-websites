@@ -9,7 +9,8 @@
   background-repeat: no-repeat;
   background-position: top center;
   
-  @include respond-to(medium) {
+  @include respond-to(large) {
+    padding: 0;
     background-image: url(../images/bg-header-desktop.png);
   }
 }

@@ -4,7 +4,7 @@
 .sponsors {
   @include flex-center(column);
   margin-bottom: 170px;
-  gap: 60px;
+  gap: 80px;
 
   @include respond-to(medium) {
     margin-bottom: 150px;
