@@ -1,15 +1,13 @@
 $colors: (
   primary: (
-    red: #ff0000,
-  ),
-
-  accent: (
-    blue: #0000ff,
+    500: hsl(22, 89%, 52%),
+    400: hsl(22, 100%, 69%),
   ),
 
   neutral: (
-    black:   #000,
-    white:   #fff,
-    gray: #808080,
+    black:   hsl(220, 50%, 17%),
+    gray500: hsl(221, 23%, 58%),
+    gray400: hsl(198, 28%, 93%),
+    white:   hsl(0, 0%, 100%),
   ),
 )

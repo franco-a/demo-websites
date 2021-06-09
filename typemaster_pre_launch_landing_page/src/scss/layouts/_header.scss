@@ -1,8 +1,21 @@
+@use '../abstracts' as *;
+
+
 .header {
   display: flex;
-  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: min(1110px, 100%);
+  padding: 23px 24px 0 24px;
+  margin-bottom: 64px;
 
-  &__btn {
-    margin-left: auto;
+  @include respond-to(medium) {
+    padding: 40px 40px 0 39px;
+    margin-bottom: 62px;
+  }
+
+  @include respond-to(large) {
+    padding: 55px 24px 0 24px;
+    margin-bottom: 83px;
   }
 }

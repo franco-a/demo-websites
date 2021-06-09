@@ -1,3 +1,18 @@
+@use '../abstracts' as *;
+
+
 .footer {
-  text-align: center;
+  @include flex-center;
+  margin-top: prem(96);
+  margin-bottom: prem(50);
+
+  @include respond-to(medium) {
+    margin-top: prem(142);
+    margin-bottom: prem(43);
+  }
+
+  @include respond-to(large) {
+    margin-top: prem(128);
+    margin-bottom: prem(39);
+  }
 }

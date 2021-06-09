@@ -1,35 +1,45 @@
 @use '../abstracts' as *;
 
+
 .btn {
-  border-radius: 8px;
   display: inline-block;
   padding: prem(11) prem(14);
-  font-size: prem(16);
+  font-size: var(--fs-sm);
   font-weight: var(--fw-bold);
   text-transform: uppercase;
   text-decoration: none;
-  transition: 250ms ease-in-out;
+  word-wrap: none;
+  border-radius: 8px;
 
-  &--primary {
+  @include respond-to(medium) {
+    padding: prem(16) prem(26);
+  }
+}
+
+.btn--primary {
+  background-color: var(--clr-primary-500);
+  color: var(--clr-neutral-white);
+
+  &:hover,
+  &:focus {
+    background-color: var(--clr-primary-400);
     color: var(--clr-neutral-white);
-    background-color: var(--clr-primary-500);
-
-    &:hover {
-      background-color: var(--clr-primary-400);
-    }
+    transition: 250ms ease-in-out;
   }
+}
 
-  &--neutral {
-    color: var(--clr-neutral-black);
-    background-color: var(--clr-neutral-gray2);
+.btn--neutral {
+  background-color: var(--clr-neutral-gray400);
+  color: var(--clr-neutral-black);
 
-    &:hover {
-      color: var(--clr-neutral-white);
-      background-color: var(--clr-neutral-black);
-    }
+  &:hover,
+  &:focus {
+    background-color: var(--clr-neutral-black);
+    color: var(--clr-neutral-white);
+    transition: 250ms ease-in-out;
   }
+}
 
-  &--psuedo {
-    color: var(--clr-neutral-gray1);
-  }
+.btn--psuedo {
+  color: var(--clr-neutral-gray500);
 }

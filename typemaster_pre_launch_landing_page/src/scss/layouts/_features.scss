@@ -1,59 +1,60 @@
 @use '../abstracts' as *;
 
-.features {
-  @include flex-center(row);
-  flex-wrap: wrap;
-  gap: 64px;
-  margin: 111px 0 96px;
 
-  @include media($breakpoint-medium) {
-    justify-content: space-evenly;
-    align-items: flex-start;
-    gap: 72px 69px;
+.features {
+  @include flex-center(column);
+  padding: 0 24px;
+  gap: prem(64);
+
+  @include respond-to(medium) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    row-gap: prem(72);
+    column-gap: prem(68);
+    padding: 0 40px 0 39px;
   }
 
-  @include media($breakpoint-large) {
-    gap: 30px
+  @include respond-to(large) {
+    gap: prem(30);
   }
 }
 
-.feature {
+.features__feature {
   @include flex-center(column);
   text-align: center;
-  width: fit-content;
 
-  @include media($breakpoint-medium) {
+  @include respond-to(medium) {
     justify-content: flex-start;
     align-items: flex-start;
     text-align: left;
   }
+}
 
-  &__icon {
+.features__icon {
+  margin-bottom: 48px;
+  
+  @include respond-to(medium) {
+    margin-bottom: 40px;
+  }
+
+  @include respond-to(medium) {
     margin-bottom: 48px;
+  }
+}
 
-    @include media($breakpoint-medium) {
-      margin-bottom: 40px;
-    }
+.features__headline {
+  max-width: 15ch;
+  margin-bottom: prem(24);
+}
 
-    @include media($breakpoint-large) {
-      margin-bottom: 48px;
-    }
+.features__supporting {
+  max-width: 36ch;
+
+  @include respond-to(medium) {
+    max-width: 31ch;
   }
 
-  &__s3heading {
-    max-width: 15ch;
-    margin-bottom: 24px;
-  }
-
-  &__paragraph {
-    max-width: 36ch;
-
-    @include media($breakpoint-medium) {
-      max-width: 31ch;
-    }
-
-    @include media($breakpoint-large) {
-      max-width: 28ch;
-    }
+  @include respond-to(large) {
+    max-width: 28ch;
   }
 }

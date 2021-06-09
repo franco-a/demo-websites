@@ -1,10 +1,15 @@
 @use '../abstracts' as *;
 
+
+html {
+  font-family: 'Barlow', sans-serif;
+}
+
 .heading,
 .subheading,
-.s3heading {
-  color: var(--clr-neutral-black);
+.sub3heading {
   font-weight: var(--fw-black);
+  color: var(--clr-neutral-black);
   text-transform: uppercase;
 }
 
@@ -18,18 +23,18 @@
   line-height: var(--lh-subheading);
 }
 
-.s3heading {
+.sub3heading {
   font-size: var(--fs-md);
-  line-height: var(--lh-s3heading);
+  line-height: var(--lh-sub3heading);
 }
 
 .paragraph {
-  color: var(--clr-neutral-gray1);
   font-size: var(--fs-sm);
   font-weight: var(--fw-medium);
   line-height: var(--lh-paragraph);
+  color: var(--clr-neutral-gray500);
+}
 
-  &--bold {
-    font-weight: var(--fw-bold);
-  }
+.paragraph--bold {
+  font-weight: var(--fw-bold);
 }

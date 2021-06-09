@@ -1,0 +1,133 @@
+@use '../abstracts' as *;
+
+
+.reinforcement {
+  padding: 0 24px;
+  margin-bottom: 111px;
+  text-align: center;
+
+  @include respond-to(medium) {
+    width: min(1110px, 100%);
+    padding: 0 40px 0 39px;
+    margin-bottom: 142px;
+  }
+
+  @include respond-to(large) {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    &::after {
+      position: absolute;
+      top: 50%;
+      left: -25%;
+      content: url(../assets/shared/pattern-square.svg);
+    }
+  }
+}
+
+.reinforcement__imgs {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 73px;
+
+  @include respond-to(medium) {
+    justify-content: center;
+  }
+
+  @include respond-to(large) {
+    margin-bottom: 0;
+  }
+}
+
+.reinforcement__img-1,
+.reinforcement__img-2 {
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  border-radius: 15px;
+}
+
+.reinforcement__img-1 {
+  width: 129px;
+  height: 193px;
+  background-image: url(../assets/mobile/image-phone-and-keyboard.jpg);
+  background-color: var(--clr-primary-500);
+  background-blend-mode: multiply;
+  transform: translateX(-24px);
+
+  @include respond-to(medium) {
+    width: 214px;
+    height: 320px;
+    background-image: url(../assets/tablet/image-phone-and-keyboard.jpg);
+    transform: translateX(0);
+  }
+
+  @include respond-to(medium) {
+    width: 255px;
+    height: 480px;
+    background-image: url(../assets/desktop/image-phone-and-keyboard.jpg);
+  }
+}
+
+.reinforcement__img-2 {
+  width: 220px;
+  height: 193px;
+  background-image: url(../assets/mobile/image-glass-and-keyboard.jpg);
+
+  @include respond-to(medium) {
+    width: 445px;
+    height: 320px;
+    margin-left: 24px;
+    background-image: url(../assets/tablet/image-glass-and-keyboard.jpg);
+  }
+
+  @include respond-to(medium) {
+    width: 445px;
+    height: 480px;
+    background-image: url(../assets/desktop/image-glass-and-keyboard.jpg);
+  }
+}
+
+.reinforcement__content {
+  @include flex-center(column);
+
+  @include respond-to(medium) {
+    flex-direction: row;
+    justify-content: center;
+    text-align: left;
+  }
+
+  @include respond-to(large) {
+    flex-direction: column;;
+    align-items: flex-start;
+    margin-left: 24px;
+  }
+}
+
+.reinforcement__headline {
+  max-width: 12ch;
+  margin-bottom: prem(24);
+
+  @include respond-to(medium) {
+    margin-right: prem(92);
+    margin-bottom: 0;
+  }
+
+  @include respond-to(large) {
+    margin-right: 0;
+    margin-bottom: prem(27);
+  }
+}
+
+.reinforcement__supporting {
+  max-width: 34ch;
+
+  @include respond-to(medium) {
+    max-width: 44ch;
+  }
+
+  @include respond-to(large) {
+    max-width: 29ch;
+  }
+}
