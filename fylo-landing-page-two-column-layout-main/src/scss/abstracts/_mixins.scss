@@ -1,0 +1,60 @@
+@use './breakpoints' as bp;
+
+
+@mixin before-after($state: before, $content: '', $position: absolute) {
+  position: relative;
+
+  &::#{$state} {
+    content: $content;
+    position: $position;
+    @content
+  }
+};
+
+
+
+
+
+@mixin flex-center($direction: row) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: center;
+  align-items:     center;
+};
+
+
+@mixin primitive-center() {
+  position: absolute;
+  top:  50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+};
+
+
+
+
+
+@mixin media($width) {
+  @media only screen and (min-width: $width) {
+    @content;
+  }
+};
+
+@mixin respond-to($breakpoint) {
+  $raw-query: map-get(bp.$breakpoints, $breakpoint);
+
+  @if $raw-query {
+    $query: if(
+      type-of($raw-query) == 'string',
+      unquote($raw-query),
+      inspect($raw-query)
+    );
+
+    @media #{$query} {
+      @content;
+    }
+  } @else {
+    @error 'No value found for `#{$breakpoint}`. '
+         + 'Please make sure it is defined in `$breakpoints` map.';
+  }
+}

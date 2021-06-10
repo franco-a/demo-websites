@@ -1,0 +1,68 @@
+@use '../abstracts' as *;
+
+
+:root {
+  // Gets all color values from $colors map in '_colors.scss'
+  @each $role, $color in $colors {
+    @each $name, $value in $color {
+      --clr-#{$role}-#{$name}: #{$value};
+    }
+  }
+
+
+
+
+  
+  // Gets all weight values from $font-weights map in '_font-rules.scss'
+  @each $weight, $value in $font-weights {
+    --fw-#{$weight}: #{$value};
+  }
+
+
+  // Gets all font size values from $font-sizes map in '_font-rules.scss'
+  // Includes media query mixins for given breakpoints
+  @each $screen-size, $font-size in $font-sizes {
+    @if $screen-size == small-screen {
+      @each $size, $value in $font-size {
+        --fs-#{$size}: #{$value};
+      }
+    } @else if $screen-size == medium-screen{
+      @include respond-to(medium) {
+        @each $size, $value in $font-size {
+          --fs-#{$size}: #{$value};
+        }
+      }
+    } @else if $screen-size == large-screen{
+      @include respond-to(large) {
+        @each $size, $value in $font-size {
+          --fs-#{$size}: #{$value};
+        }
+      }
+    }
+  }
+
+
+  // Gets all line height values from $line-heights map in '_font-rules.scss'
+  // Includes media query mixins for given breakpoints
+  @each $screen-size, $line-height in $line-heights {
+    @if $screen-size == small-screen {
+      @each $role, $value in $line-height {
+        --lh-#{$role}: #{$value};
+      }
+    } @else if $screen-size == medium-screen{
+      @include respond-to(medium) {
+        @each $role, $value in $line-height {
+          --lh-#{$role}: #{$value};
+        }
+      }
+    } @else if $screen-size == large-screen{
+      @include respond-to(large) {
+        @each $role, $value in $line-height {
+          --lh-#{$role}: #{$value};
+        }
+      }
+    }
+  }
+
+
+}
